@@ -1,0 +1,19 @@
+1) When to use ?
+
+ -> Consider using the Singleton pattern when you need to ensure that only one instance of a class exists in your application
+ -> Use it when you want to provide a straightforward way for clients to access that instance from a specific location in your code.
+
+2) Examples
+
+ -> This pattern is often used in situations like logging, managing connections to hardware or databases, caching data, or handling thread pools, where having just one instance makes sense
+
+3) Advantages
+
+ -> The Singleton pattern guarantees that there’s only one instance with a unique identifier, which helps prevent naming issues
+ -> By keeping just one instance, the Singleton pattern can help lower memory usage in applications where resources are limited.
+
+4) Disadvantages
+
+ -> Singletons can make unit testing difficult since they introduce a global state. This can complicate testing components that depend on a Singleton, as its state can influence the test results.
+ -> If you later find that you need multiple instances or want to modify how instances are created, it can require significant code changes.
+ -> The Singleton pattern creates a global dependency, which can complicate replacing the Singleton with a different implementation or using dependency injection.
